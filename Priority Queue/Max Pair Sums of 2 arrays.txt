@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,n,k,i,j;
+    cin>>t;
+    while(t--){
+        cin>>n>>k;
+        vector<int> v1(n),v2(n),res;
+        priority_queue<int,vector<int>,greater<int>> pq;
+        for(i=0;i<n;i++){
+            cin>>v1[i];
+        }
+        sort(v1.begin(),v1.end(),greater<int>());
+         for(i=0;i<n;i++){
+            cin>>v2[i];
+        }
+        sort(v2.begin(),v2.end(),greater<int>());
+        for(i=0;i<n;i++){
+            for(j=0;j<n;j++){
+                if(pq.size()<k){
+                    pq.push(v1[i]+v2[j]);
+                }
+                else if(v1[i]+v2[j]>pq.top()){
+                    pq.pop();
+                    pq.push(v1[i]+v2[j]);
+                }
+                else{
+                    break;
+                }
+                }
+            }
+            while(!pq.empty()){
+                res.push_back(pq.top());
+                pq.pop();
+            }
+            for(i=k-1;i>=0;i--){
+                cout<<res[i]<<" ";
+            }
+            cout<<"\n";
+        }
+    }
+    
+    

@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,a;
+    string str;
+    priority_queue<int,vector<int>,greater<int>> pq;
+    cin>>t;
+    while(t--){
+        cin>>str;
+        if(str=="getMin"){
+            if(!pq.empty())
+              cout<<pq.top()<<"\n";
+            else
+               cout<<"Empty"<<"\n";
+        }
+        else if(str=="delMin"){
+            if(!pq.empty())
+              pq.pop();
+        }
+        else{
+            cin>>a;
+            pq.push(a);
+        }
+    }
+}
+      
