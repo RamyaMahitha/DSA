@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+void printHello(int n);
+int main() {
+    printHello(1000);
+}
+void printHello(int n){
+    if(n>0){
+        cout<<"Hello World"<<"\n";
+        printHello(n-1);
+    }
+}

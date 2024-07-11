@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+long int reverse(long int n,long int rev){
+    if(n==0){
+        return rev;
+    }
+    int rem=n%10;
+    rev=rev*10+rem;
+    return reverse(n/10,rev);
+}
+int main(){
+    long int n;
+    cin>>n;
+ cout<<reverse(n,0);
+}

@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+ void mul( int n,int i){
+    if(i>10){
+        return ;
+    }
+   cout<<n<<" * "<<i<<" = "<<n*i<<"\n";
+   mul(n,i+1);
+}
+int main(){
+     int n;
+    cin>>n;
+    mul(n,1);
+}

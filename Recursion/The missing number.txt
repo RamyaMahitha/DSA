@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int miss(int n){
+    int sum=0;
+    if(n>0){
+        sum+=n+miss(n-1);
+        return sum;
+    }
+    else
+    return sum;
+}
+int main() {
+    int sum=0,t_sum=0,y;
+    sum=miss(100);
+    while(cin>>y){
+        t_sum+=y;
+    }
+    cout<<sum-t_sum<<"\n";
+}

@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+ int arm( int n,int sum){
+    if(n==0){
+        return sum;
+    }
+    int rem=n%10;
+    sum=sum+rem*rem*rem;
+    return arm(n/10,sum);
+}
+int main(){
+     int n;
+    cin>>n;
+    int res=arm(n,0);
+    if(res==n)
+      cout<<"Yes";
+     else
+      cout<<"No";
+}
