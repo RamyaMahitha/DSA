@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,i,count;
+    long int n;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        count=0;
+        while(n!=0){
+             n=n&(n-1);
+             count++;
+            }
+        cout<<count<<"\n";
+    }
+}
+     
+    
+        
+        
+
+    

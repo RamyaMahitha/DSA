@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,n,res1,res2,i;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        res1=n&1431655765;
+        res2=n&2863311530;
+        res1=res1<<1;
+        res2=res2>>1;
+        cout<<(res1|res2)<<endl;
+    }
+}
+    
+        
+        
+
+    

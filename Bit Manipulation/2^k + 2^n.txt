@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int x,y,i,count;
+        cin>>x>>y;
+        x=1<<x;
+        y=1<<y;
+        cout<<(x|y);
+}
+     
+    
+        
+        
+
+    
