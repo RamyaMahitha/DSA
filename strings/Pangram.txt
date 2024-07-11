@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n,flag=0,i;
+    string str;
+    cin>>n;
+    cin>>str;
+    vector<int> count(26);
+    sort(str.begin(),str.end());
+    for(i=0;i<str.length();i++){
+        str[i]=tolower(str[i]);
+
+            count[str[i]-97]++;
+        
+    }
+    for(i=0;i<count.size();i++){
+        if(count[i]==0)
+        flag=1;
+    }
+    if(flag==0)cout<<"YES"<<"\n";
+    else cout<<"NO"<<"\n";
+    
+}

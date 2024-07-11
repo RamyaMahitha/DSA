@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t,i;
+    string str,str1;
+    cin>>t;
+    while(t--){
+        cin>>str;
+        str1="yes";
+        for(i=0;i<3;i++){
+            str[i]=tolower(str[i]);
+        }
+        if(str==str1)
+            cout<<"YES"<<endl;
+        
+        else
+          cout<<"NO"<<endl;
+            }
+        }
+    
+    

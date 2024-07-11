@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,i,count,len;
+    string s1,s2;
+    s2="codeforces";
+    cin>>t;
+    while(t--){
+        count=0;
+     cin>>s1;
+     for(i=0;i<s1.length();i++){
+         if(s1[i]!=s2[i]){
+             count++;
+         }
+     }
+     cout<<count<<endl;
+    }
+}
+      
+         

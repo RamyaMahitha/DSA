@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+   int t;
+   cin>>t;
+   cin.ignore();
+   while(t--){
+       string str;
+       getline(cin,str);
+       int w=0,v=0,c=0;
+       for(int i=0;i<str.length();i++){
+           if(!(isspace(str[i])) && isspace(str[i+1]))
+             w++;
+        if(isalpha(str[i])){
+            str[i]=tolower(str[i]);
+            if(str[i]=='a'|| str[i]=='e'||str[i]=='i'|| str[i]=='o'||str[i]=='u'){
+                v++;
+            }
+            else
+              c++;
+        }
+       }
+       if(str[str.length()-1]==' '){
+           cout<<w<<" "<<v<<" "<<c<<"\n";
+       }
+       else{
+           cout<<w+1<<" "<<v<<" "<<c<<"\n";
+           }
+   }
+}

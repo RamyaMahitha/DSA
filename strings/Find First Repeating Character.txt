@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,i,len;
+    string str;
+    cin>>t;
+    while(t--){
+      cin>>str;
+       char ch='.';
+    len=str.length();
+    vector <int>count(26);
+     for(int i=0;i<len;i++){
+         count[str[i]-97]++;
+         }
+     for(i=0;i<len;i++){
+        if(count[str[i]-97]>1){
+          ch=str[i];
+         break;
+             }
+        }
+    cout<<ch<<"\n";
+        }
+}

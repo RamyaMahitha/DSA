@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,i,count,len;
+    string str;
+    cin>>n;
+    while(n--){
+     cin>>str;
+     len=str.length();
+     count=0;
+     if(len>10){
+     for(int i=1;i<len-1;i++){
+           count++;
+     }
+     cout<<str[0]<<count<<str[len-1]<<endl;
+     }
+     else{
+         cout<<str<<endl;
+     }
+    }
+}
+      
+         
