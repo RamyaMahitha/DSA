@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,n,m,i,j,k,sum;
+    cin>>t;
+    while(t--){
+        cin>>n>>m;
+        vector<vector<char>>v(n,vector<char>(m));
+        string str;
+        for(i=0;i<n;i++){
+            cin>>str;
+            for(j=0;j<m;j++){
+                v[i][j]=str[j];
+            }
+        }
+        bool flag=true;
+      for(i=0;i<n;i++){
+          for(j=0;j<m;j++){
+              if(v[i][j]=='W'){
+                  if(j==0 || j==m-1 || i==n-1){
+                       flag=false;
+                       break;
+                  }
+                  else if(v[i+1][j]=='A' || v[i][j-1]=='A' || v[i][j+1]=='A'){
+                      flag=false;
+                      break;
+                  }
+                  }
+                  else if(v[i][j]=='B'){
+                      if(i!=n-1 && (v[i+1][j]=='A' ||v[i+1][j]=='W')){
+                          flag=false;
+                          break;
+                      }
+                  }
+              }
+              if (flag==false)
+                break;
+          }
+          if(flag==true)
+             cout<<"yes"<<endl;
+          else
+             cout<<"no"<<endl;
+          }
+      }
+
+

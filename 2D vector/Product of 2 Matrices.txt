@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() { 
+    int t,n1,m1,n2,m2,i,j;
+    cin>>t;
+    while(t--){
+        cin>>n1>>m1;
+          vector<vector<int>>a(n1,vector<int>(m1));
+         for(i=0;i<n1;i++){
+            for(j=0;j<m1;j++){
+                 cin>>a[i][j];
+            }
+        }
+        cin>>n2>>m2;
+        vector<vector<int>>b(n2,vector<int>(m2));
+         for(i=0;i<n2;i++){
+            for(j=0;j<m2;j++){
+                 cin>>b[i][j];
+            }
+        }
+    if(m1==n2){
+       vector<vector<int>>c(n1,vector<int>(m2));
+         for(i=0;i<n1;i++){
+            for(j=0;j<m2;j++){
+                c[i][j]=0;
+                for(int k=0;k<m1;k++){
+                    c[i][j]+=a[i][k]*b[k][j];
+                }
+            }
+        }
+         for(i=0;i<n1;i++){
+            for(j=0;j<m2;j++){
+                 cout<<c[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+}
+}
+}
