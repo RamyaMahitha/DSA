@@ -1,0 +1,18 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+#include <vector>
+int main() {
+    int t,c,l,r,i,k;
+    cin>>t;
+    for(i=1;i<=t;i++){
+        cin>>l>>r;
+        c=0;
+        for(k=l;k<=r;k++){
+             int rem=k%10;
+             if(rem==2||rem==3||rem==9)
+                c++;
+            }
+            cout<<c<<endl;
+            }
+        }

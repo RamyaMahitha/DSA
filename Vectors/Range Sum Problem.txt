@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n, q;
+    cin >> n >> q;
+
+    vector<long long> prefixSum(n + 1, 0);
+    vector<long long> arr(n);
+
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+        prefixSum[i + 1] = prefixSum[i] + arr[i];
+    }
+
+    while (q--) {
+        int L, R;
+        cin >> L >> R;
+        cout << prefixSum[R] - prefixSum[L - 1] << "\n";
+    }
+
+    return 0;
+}
