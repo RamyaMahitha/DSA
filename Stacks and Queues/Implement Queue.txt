@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t,a;
+    string str;
+    cin>>t;
+    queue <int> q;
+    while(t--){
+        cin>>str;
+        if(str=="Dequeue"){
+            if(q.empty()){
+                cout<<"Empty"<<"\n";
+            }
+            else{
+            cout<<q.front()<<"\n";
+            q.pop();
+            }
+        }
+        else{
+            cin>>a;
+            q.push(a);
+        }
+       
+}
+
+}
+    
+    

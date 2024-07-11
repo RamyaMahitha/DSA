@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int t,n,a,i,j;
+   char c;
+   cin>>t;
+   for(i=1;i<=t;i++){
+       cout<<"Case "<<i<<":"<<"\n";
+       stack <int> st;
+       cin>>n;
+       while(n--){
+          cin>>c;
+          if(c=='R'){
+              if(!st.empty())
+              st.pop();
+          }
+          else if(c=='A'){
+              cin>>a;
+              if(st.empty())
+                 st.push(a);
+               else
+                 st.push(max(st.top(),a));
+              }
+          else{
+              if(st.empty())
+                cout<<"Empty"<<"\n";
+             else
+              cout<<st.top()<<"\n";
+          }
+       }
+   }
+}
+      
+
