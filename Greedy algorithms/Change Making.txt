@@ -1,0 +1,16 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,c;
+    cin>>n;
+    c=n/25;
+    n=n%25;
+    c+=n/10;
+    n=n%10;
+    c+=n/5;
+    n=n%5;
+    c+=n/1;
+    cout<< c <<endl;
+}

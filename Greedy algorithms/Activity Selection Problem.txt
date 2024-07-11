@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+        int n,count=0;
+        cin>>n;
+        priority_queue< pair<int,int>, vector<pair<int,int>> , greater<pair<int,int>> > pq;
+        int s,e;
+        while(n--){
+            cin>>s>>e;
+            pq.push({e,s});
+        }
+        pair<int,int> curr= pq.top();
+        pq.pop();
+        count++;
+        while(!pq.empty()){
+            if(curr.first<pq.top().second){
+                curr=pq.top();
+                count++;
+            }
+            pq.pop();
+        }
+        cout<<count<<endl;
+    }

@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long
+candies (long long n, vector < long long >&arr)
+{
+  
+if (n == 0)
+	return 0;
+  
+vector < long long >candies (n, 1);
+  
+for (long long i = 1; i < n; ++i)
+	{
+	  
+if (arr[i] > arr[i - 1])
+		{
+		  
+candies[i] = candies[i - 1] + 1;
+		
+}
+	
+}
+  
+for (long long i = n - 2; i >= 0; --i)
+	{
+	  
+if (arr[i] > arr[i + 1] && (candies[i] <= candies[i + 1]))
+		{
+		  
+candies[i] = max (candies[i], candies[i + 1] + 1);
+		
+}
+	
+}
+  
+long long total_candies = 0;
+  
+for (long long i = 0; i < n; ++i)
+	{
+	  
+total_candies += candies[i];
+	
+} 
+ 
+return total_candies;
+
+}
+
+
+ 
+int
+main ()
+{
+  
+long long N;
+  
+cin >> N;
+  
+vector < long long >ratings (N);
+  
+for (long long i = 0; i < N; i++)
+	{
+	  
+cin >> ratings[i];
+	
+} 
+long long result = candies (N, ratings);
+  
+cout << result << endl;
+  
+return 0;
+
+}
