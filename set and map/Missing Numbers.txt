@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,m;
+        cin>>n;
+        map<int,int> mp;
+         vector <int> v1(n);
+          for(int i=0;i<n;i++){
+            cin>>v1[i];
+             mp[v1[i]]--;
+    }
+      cin>>m;
+        vector <int> v2(m);
+             for(int i=0;i<m;i++){
+            cin>>v2[i];
+             mp[v2[i]]++;
+    }
+    for(auto p:mp){
+      if(p.second!=0)
+        cout<<p.first<<" ";
+    }        
+}
+    
+    

@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+int t,max,i;
+cin>>t;
+while(t--){
+string str;
+cin>>str;
+unordered_map<char,int> mp;
+for(i=0;i<str.length();i++){
+    mp[str[i]]++;
+}
+char ch='.';
+for(i=0;i<str.length();i++){
+    if(mp[str[i]]>1){
+        ch=str[i];
+        break;
+    }
+}
+cout<<ch<<"\n";
+}
+}
+
+
+    
